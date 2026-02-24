@@ -2,6 +2,7 @@ import express from "express"
 import dbConnect from "./config/db.js";
 import userRouter from "./routes/userRoute.js";
 const app = express();
+app.use(cors())   //this will give permission to frontend to access api
 
 const StartServer = async () => {
     await dbConnect()
